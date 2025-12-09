@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Miraza</title>
+<script type="module" src="app.js" defer></script>
+<style>
+body { margin:0; font-family: Arial, sans-serif; background:#121212; color:#fff; }
+#loginContainer, #chatContainer { display:flex; justify-content:center; align-items:center; height:100vh; }
+#loginContainer { flex-direction:column; }
+input { padding:10px; font-size:18px; border-radius:5px; border:none; outline:none; width:200px; margin-bottom:10px; background:#1e1e1e; color:#fff; }
+button { padding:10px 20px; font-size:16px; border:none; border-radius:5px; cursor:pointer; margin-left:5px; }
+#chatContainer { flex-direction:column; height:100vh; max-width:600px; margin:auto; }
+#messages { flex:1; overflow-y:auto; width:100%; padding:10px; background:#1e1e1e; border-radius:5px; }
+.message { margin-bottom:10px; }
+#inputContainer { display:flex; margin-top:10px; }
+#inputMessage { flex:1; padding:10px; border-radius:5px; border:none; outline:none; background:#2a2a2a; color:#fff; }
+#clearBtn { background:red; color:#fff; }
+</style>
+</head>
+<body>
+<div id="loginContainer">
+<input type="password" id="magicWord" placeholder="">
+<button id="enterBtn">Enter</button>
+</div>
+
+<div id="chatContainer" style="display:none;">
+<div id="messages"></div>
+<div id="inputContainer">
+<input type="text" id="inputMessage" placeholder="Type a message...">
+<button id="sendBtn">Send</button>
+<button id="clearBtn">Clear UI</button>
+</div>
+</div>
+</body>
+</html>
