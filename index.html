@@ -1,37 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="google-site-verification" content="uGcn3gvOBL5V2E31AVA4J3OKtFXe0yHQfW0rQwSrn-0" />
-<title>Miraza</title>
-<script type="module" src="app.js" defer></script>
-<style>
-body { margin:0; font-family: Arial, sans-serif; background:#121212; color:#fff; }
-#loginContainer, #chatContainer { display:flex; justify-content:center; align-items:center; height:100vh; }
-#loginContainer { flex-direction:column; }
-input { padding:10px; font-size:18px; border-radius:5px; border:none; outline:none; width:200px; margin-bottom:10px; background:#1e1e1e; color:#fff; }
-button { padding:10px 20px; font-size:16px; border:none; border-radius:5px; cursor:pointer; margin-left:5px; }
-#chatContainer { flex-direction:column; height:100vh; max-width:600px; margin:auto; }
-#messages { flex:1; overflow-y:auto; width:100%; padding:10px; background:#1e1e1e; border-radius:5px; }
-.message { margin-bottom:10px; }
-#inputContainer { display:flex; margin-top:10px; }
-#inputMessage { flex:1; padding:10px; border-radius:5px; border:none; outline:none; background:#2a2a2a; color:#fff; }
-#clearBtn { background:red; color:#fff; }
-</style>
-</head>
-<body>
-<div id="loginContainer">
-<input type="password" id="magicWord" placeholder="">
-<button id="enterBtn">Enter</button>
-</div>
+  <meta charset="UTF-8">
 
-<div id="chatContainer" style="display:none;">
-<div id="messages"></div>
-<div id="inputContainer">
-<input type="text" id="inputMessage" placeholder="Type a message...">
-<button id="sendBtn">Send</button>
-<button id="clearBtn">Clear UI</button>
-</div>
-</div>
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="uGcn3gvOBL5V2E31AVA4J3OKtFXe0yHQfW0rQwSrn-0">
+
+  <!-- SEO -->
+  <title>Miraza – Open Chat Website for Real-Time Conversations</title>
+  <meta name="description" content="Miraza is an open chat website where people connect and talk freely in real time. Simple, fast, and open chat rooms.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Miraza – Open Chat Website">
+  <meta property="og:description" content="Join Miraza to chat openly and connect with people in real time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://miraza.com">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Miraza",
+    "url": "https://miraza.com",
+    "description": "Miraza is an open chat website for real-time conversations."
+  }
+  </script>
+
+  <!-- App Script -->
+  <script type="module" src="app.js" defer></script>
+
+  <!-- Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+    }
+
+    header {
+      max-width: 700px;
+      margin: 20px auto;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+      color: #ccc;
+    }
+
+    p {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    #loginContainer,
+    #chatContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #loginContainer {
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      width: 220px;
+      margin-bottom: 10px;
+      background: #1e1e1e;
+      color: #fff;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    #chatContainer {
+      flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+      display: none;
+    }
+
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      width: 100%;
+      padding: 10px;
+      background: #1e1e1e;
+      border-radius: 5px;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
+
+    #inputContainer {
+      display: flex;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    #inputMessage {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      background: #2a2a2a;
+      color: #fff;
+    }
+
+    #clearBtn {
+      background: red;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin: 20px;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SEO CONTENT -->
+  <header>
+    <h1>Miraza – Open Chat Website</h1>
+    <h2>Real-Time Conversations Without Barriers</h2>
+    <p>
+      Miraza is an open chat website designed for people who want simple and fast
+      real-time conversations. Join and talk freely without unnecessary complexity.
+    </p>
+  </header>
+
+  <!-- LOGIN -->
+  <div id="loginContainer">
+    <input
+      type="password"
+      id="magicWord"
+      placeholder="Search"
+      aria-label="Access key"
+    >
+    <button id="enterBtn">Enter</button>
+  </div>
+
+  <!-- CHAT -->
+  <div id="chatContainer">
+    <div id="messages"></div>
+
+    <div id="inputContainer">
+      <input
+        type="text"
+        id="inputMessage"
+        placeholder="Type a message..."
+        aria-label="Chat message"
+      >
+      <button id="sendBtn">Send</button>
+      <button id="clearBtn">Clear UI</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Miraza · Open Chat Platform</p>
+    <p>
+      <a href="/privacy-policy">Privacy</a> ·
+      <a href="/terms">Terms</a>
+    </p>
+  </footer>
+
 </body>
 </html>
